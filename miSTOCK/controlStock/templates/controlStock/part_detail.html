@@ -1,0 +1,33 @@
+
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+     <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+      <link href="http://mottie.github.io/tablesorter/css/theme.default.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="./style.css" media="screen" />
+      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.9.1/jquery.tablesorter.min.js"></script>
+      <link rel="stylesheet" href="{% static 'css/controlStock.css' %}">
+    <script>
+        $(function(){
+          $("#myDummyTable").tablesorter({widgets: ['zebra']});
+        });
+    </script>
+</head>
+<body>
+Part details:
+{{ compo.pk }}
+<p>{{ compo.Description }}</p>
+
+
+{{ compo.PartNum }}
+
+
+</body>
+</html>
